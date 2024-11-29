@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa!</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img id="scaryImage" src="https://i.imgur.com/QrDdoYs.png" alt="Assustador">
+    <audio id="scarySound" src="https://www.fesliyanstudios.com/play-mp3/6676" preload="auto"></audio>
+
+    <script>
+        setTimeout(() => {
+            const image = document.getElementById('scaryImage');
+            const sound = document.getElementById('scarySound');
+            image.style.display = 'block';
+            sound.play();
+        }, 3000); // Aparece após 3 segundos
+    </script>
+</body>
+</html>
